@@ -1,0 +1,27 @@
+:root {
+    font: 20px/24px "Roboto", sans-serif;
+}
+
+
+article {
+    display: grid;
+    grid-template-columns:1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+
+    height: 50vh;
+    /* temp fix */
+    padding: 0.5in 0;
+}
+
+article * {
+    grid-column: start / end;
+}
+
+h1 {text-align: center; font: 700 1.8rem/1.2 "Roboto";}
+h2 {text-align: center; font: 400 1.0rem/1.2 "Roboto";}
+
+
+@media (max-width: 8.5in) {
+    article {
+        grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+    }
+}
